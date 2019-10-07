@@ -57,6 +57,12 @@ public function detail($id)
  }
 
 
+	 public function getubah()
+	 {
+		 echo 'ok';
+	 }
+
+
 
 }
 
