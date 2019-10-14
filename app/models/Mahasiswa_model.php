@@ -93,6 +93,15 @@ public function ubahDataMahasiswa($data)
 
 }
 
+public function cariDataMahasiswa()
+{
+	$keyword = $_POST['keyword'];
+	$query = "SELECT * FROM mahasiswa WHERE nama LIKE :keyword";
+	$this->db->query($query);
+	$this->db->bind('keyword', "%$keyword%");
+	return $this->db->resultSet();
+}
+
 
 }
 
