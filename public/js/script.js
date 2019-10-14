@@ -12,6 +12,7 @@ $('.tampilModalUbah').on('click', function(){
    
     $('#formModalLabel').html('ubah data mahasiswa');
     $('.modal-footer button[type=submit]').html('Ubah data ');
+    $('.modal-body form').attr('action', 'http://localhost/phpmvc/public/mahasiswa/ubah');
 
 
     const id = $(this).data('id');
@@ -22,7 +23,14 @@ $('.tampilModalUbah').on('click', function(){
         method: 'post',
         dataType: 'json',
         success: function(data) {
-            console.log(data);
+            $('#nama').val(data.nama);
+            $('#nrp').val(data.nrp);
+            $('#email').val(data.email);
+            $('#jurusan').val(data.jurusan);
+            $('#id').val(data.id);
+            
+
+            
         }
 
     });

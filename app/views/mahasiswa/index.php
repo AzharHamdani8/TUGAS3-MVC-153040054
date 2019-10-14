@@ -22,7 +22,7 @@
   					<li class="list-group-item">
   					<?= $mhs['nama']; ?>
   					
-  					<a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclik="return confrim('yakin?');">hapus</a>
+  					<a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confrim('yakin?');">hapus</a>
 
 					  <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge badge-success float-right ml-1 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $mhs['id'];?>">Ubah</a>
 
@@ -57,7 +57,7 @@
 
         <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
 
-
+		<input type="hidden" name="id" id="id">
 			<div class="form-group">
 			<label for="nama">Nama</label>
 			<input type="text" class="form-control" id="nama" name="nama">
